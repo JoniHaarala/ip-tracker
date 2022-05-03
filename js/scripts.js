@@ -2,7 +2,7 @@ const btnBuscar = document.getElementById('btnBuscar')
 
 const address = document.getElementById('address')
 const loc = document.getElementById('location')
-const timeZone= document.getElementById('timezone')
+const timeZone = document.getElementById('timezone')
 const isp = document.getElementById('isp')
 
 
@@ -32,7 +32,7 @@ const getInitUbi = async (ubi) => {
 
             address.textContent = infoIp
             isp.textContent = infoIsp
-            loc.textContent = ubi.city +', ' + ubi.country
+            loc.textContent = ubi.city + ', ' + ubi.country
             timeZone.textContent = 'UTC ' + ubi.timezone;
 
             /* Creamos el div del mapa */
@@ -46,7 +46,11 @@ const getInitUbi = async (ubi) => {
                 attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
                 style: 'https://api.maptiler.com/maps/basic/style.json?key=ygF3GfNGpfuVuX0kZOz1'
             }).addTo(map);
-            let marker = L.marker([lat, long]).addTo(map);
+            let marker = L.marker([lat-0.003, long]).addTo(map);
+            var popup = L.popup()
+                .setLatLng([lat, long])
+                .setContent("Your Current IP location")
+                .openOn(map);
         }
         else {
             const res2 = await fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_C78Gxcv1hHlX7aPWfFgoYVXEfwMx8&ipAddress=` + getIp)
@@ -84,7 +88,7 @@ console.log(getInitUbi())
 
 const deleteChild = () => {
     document.body.removeChild(document.getElementById('map'));
-  };
+};
 
 btnBuscar.addEventListener('click', async () => {
     let getIp = document.getElementById('iptext').value
