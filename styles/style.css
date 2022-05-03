@@ -128,6 +128,6 @@ body {
 
     /* CSS to map */
     #map {
-        height: 70rem;
+        height: 100vmin;
     }
 }
