@@ -56,8 +56,15 @@ const getInitUbi = async (ubi) => {
             const res2 = await fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_C78Gxcv1hHlX7aPWfFgoYVXEfwMx8&ipAddress=` + getIp)
             const datos2 = await res2.json()
             const ubi = await datos2.location;
+            const infoIp = await datos2.ip;
+            const infoIsp = await datos2.isp;
 
             const fragment = document.createDocumentFragment();
+
+            address.textContent = infoIp
+            isp.textContent = infoIsp
+            loc.textContent = ubi.city + ', ' + ubi.country
+            timeZone.textContent = 'UTC ' + ubi.timezone;
 
             console.log(ubi);
             const lat = ubi.lat;
