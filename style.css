@@ -1,0 +1,114 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+}
+/* CSS to Header */
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url("./img/pattern-bg.png");
+    background-size: cover;
+    height: 15rem;
+}
+.header__title{
+    text-align: center;
+    color: aliceblue;
+    font-size: xx-large;
+    font-weight: 500;
+    margin: 0%;
+    margin-bottom: 1rem;
+}
+.header__input{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: none;
+}
+.header__input__text{
+    width: 75%;
+    height: 2.5rem;
+    border-radius: 10px 0 0 10px;
+    font-size: large;
+}
+.header__input__text::placeholder{
+    font-size: small;
+}
+
+.header__input__btn{
+    color: aliceblue;
+    height: 2.8rem;
+    width: 2.5rem;
+    background-color: black;
+    border: none;
+    border-radius: 0 10px 10px 0;
+}
+/* CSS to Info display */
+.info{
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    width: 80%;
+    border-radius: 15px;
+    align-self: center;
+    position: sticky;
+}
+.info__address,
+.info__location,
+.info__timezone,
+.info__isp{
+    text-align: center;
+}
+.info__address,
+.info__location,
+.info__timezone,
+.info__isp p{
+    width: 100%;
+}
+/* .info__location{
+
+}
+.info__timezone{
+
+}
+.info__isp{
+
+} */
+
+/* CSS to map */
+#map { 
+    height: 50rem;
+}
+
+@media (min-width: 768px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url("./img/pattern-bg.png");
+        background-size: cover;
+        height: 30rem;
+    }
+    .header__title{
+        text-align: center;
+        font-size: xx-large;
+        font-weight: 500;
+    }
+    .header__input{
+        align-self: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    /* CSS to Info display */
+    
+    /* CSS to map */
+    #map { 
+        height: 70rem;
+    }
+}

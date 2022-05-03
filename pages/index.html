@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.13.1/mapbox-gl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl-leaflet/0.0.15/leaflet-mapbox-gl.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.13.1/mapbox-gl.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <title>IP tracker</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">IP Address Tracker</h1>
+        <div class="header__input">
+            <input id="iptext" class="header__input__text" type="text" placeholder="Search for any IP address or domain"
+                onkeypress="" />
+            <input id="btnBuscar" class="header__input__btn" type="button" value=">" />
+        </div>
+
+    </header>
+
+    <div class="info">
+        <div class="info__address">
+            <p>IP Address</p>
+            <p id="address"></p>
+        </div>
+        <div class="info__location">
+            <p>Location</p>
+            <p id="location"></p>
+        </div>
+        <div class="info__timezone">
+            <p>Time Zone</p>
+            <p id="timezone"></p>
+        </div>
+        <div class="info__isp">
+            <p>ISP</p>
+            <p id="isp"></p>
+        </div>
+    </div>
+
+    <!-- Aqui va el mapa generado en js -->
+    <!-- <div id="map"></div> -->
+
+    <script src="../scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
