@@ -3,7 +3,7 @@
 This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
 
 ## IMPORTANT!
-<b>To visualize the page DONT use any browser ho used AdLocks or has strong privacy blockers... I recommend Use browsers like Edge or Chrome for a correct funtionality thanks</b> 
+<b>To visualize the page DONT use any browser that used AdLocks or has strong privacy blockers... I recommend use browsers like Edge or Chrome for a correct funtionality. Cheers</b> 
 
 ## Table of contents
 
