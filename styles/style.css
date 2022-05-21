@@ -9,13 +9,14 @@ body {
 
 /* CSS to Header */
 .header {
+    z-index: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     background-repeat: no-repeat;
     background-image: url("../img/pattern-bg.png");
     background-size: cover;
-    height: 15rem;
+    height: 25rem;
 }
 
 .header__title {
@@ -24,10 +25,12 @@ body {
     font-size: xx-large;
     font-weight: 500;
     margin: 0%;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .header__input {
+    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -56,13 +59,15 @@ body {
 
 /* CSS to Info display */
 .info {
+    position: absolute;
+    top: 25%;
+    left: 16%;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     background-color: blanchedalmond;
-    width: 80%;
+    width: 70%;
     border-radius: 15px;
-    align-self: center;
-    position: sticky;
 }
 
 .info__address,
@@ -79,22 +84,21 @@ body {
     width: 100%;
 }
 
-/* .info__location{
-
-}
-.info__timezone{
-
-}
-.info__isp{
-
-} */
 
 /* CSS to map */
 #map {
-    height: 50rem;
+    z-index: 0;
+    height: 90vh;
 }
 
 @media (min-width: 768px) {
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20rem;
+    }
 
     .header__title {
         text-align: center;
@@ -114,8 +118,11 @@ body {
         display: flex;
         flex-direction: row;
         border-radius: 15px;
-        width: 100%;
+        width: 80%;
+        max-width: 1200px;
         justify-content: space-around;
+        top: 17rem;
+        left: 11%;
     }
 
     .info__address,
@@ -128,6 +135,12 @@ body {
 
     /* CSS to map */
     #map {
-        height: 100vmin;
+        height: 80vmin;
+    }
+}
+
+@media (min-width: 1500px){
+    .info{
+        left: 11rem;
     }
 }
