@@ -118,8 +118,7 @@ body {
         display: flex;
         flex-direction: row;
         border-radius: 15px;
-        width: 80%;
-        max-width: 1200px;
+        width: 78%;
         justify-content: space-around;
         top: 17rem;
         left: 11%;
@@ -136,11 +135,5 @@ body {
     /* CSS to map */
     #map {
         height: 80vmin;
-    }
-}
-
-@media (min-width: 1500px){
-    .info{
-        left: 11rem;
     }
 }
